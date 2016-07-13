@@ -1,0 +1,11 @@
+<%= form_for :item do |f| %>
+	<%= f.text_area :content , placeholder: "Yeni Görev Oluştur"%>
+	<%= f.hidden_field :is_completed , value: false %>
+
+	<% if  user_signed_in? %>
+		<%= f.hidden_field :user_id , value: current_user.id %> <br>
+	<% end %>
+	
+
+	<%= f.submit "Kaydet" %> <br>
+<% end %>

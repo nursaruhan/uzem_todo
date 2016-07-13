@@ -1,0 +1,18 @@
+<h1>Görevler</h1>
+<% @items.each do |item| %>
+	<%= item.content %> <br>
+	<% if item.is_completed %><br>
+		 <%= link_to "Geri al",complete_item_path(item), method: :patch %>
+	<% else %>
+		<%= link_to "Tamamla", complete_item_path(item), method: :patch %>
+		
+	<% end %>
+
+	<%= link_to "Sil", item_path(item), method: :delete %> <br>
+
+	<%= item.user.email %><br>
+------------------------- <br> <br>
+<% end %>
+
+<%= render 'form' %>
+
