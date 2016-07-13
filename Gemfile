@@ -29,6 +29,7 @@ gem 'pry-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'awesome_print'
+gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
